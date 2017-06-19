@@ -6,6 +6,14 @@ This project is an attempt to make simple AI capable of playing Gomoku game.
 
 This project was developed with Stack (https://www.haskellstack.org/). Other prerequisites are listed in .cabal file. While building project, stack should install them automatically.
 
+## Source code
+
+Source code is available under this path:
+
+```
+/Gomoku/app/Main.hs
+```
+
 ### Prerequisites
 
 Current listing from cabal file (should be installed automatically while building with stack): 
