@@ -8,7 +8,7 @@ This project was developed with Stack (https://www.haskellstack.org/). Other pre
 
 ### Prerequisites
 
-Current listing from cabal file: 
+Current listing from cabal file (should be installed automatically while building with stack): 
 
 ```
 split, universe-base, process
@@ -17,11 +17,24 @@ split, universe-base, process
 ### Installing
 
 ```
-git clone 
-cd Gomoku
+git clone https://github.com/szymonsadowski3/Gomoku-Simple-AI.git
+cd Gomoku-Simple-AI/Gomoku/
 stack build
 stack exec Gomoku-exe
 ```
+
+### How to run
+
+After succesfull build, please run this command:
+
+```
+stack exec Gomoku-exe
+```
+
+### Example run for 19x19
+
+![run19x19](https://i.snag.gy/2QVpuy.jpg "Screen")
+
 ### Important notes
 
 Playing Gomoku on 19x19 board is very computationally-expensive, so please be patient while waiting for AI's next move :P
