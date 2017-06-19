@@ -129,7 +129,7 @@ byComplex2 (x,board) = x
 showWinner whoseMove = do
     putStrLn ((show whoseMove)++ " WINS!")
 
-mainLoop whoseMove boardState iterationsLeft = do
+mainLoop whoseMove boardState = do
     let trtail = getTail (generateGameTreeDepths whoseMove boardState 1)
     putStrLn ("")
     putStrLn ("")
@@ -139,12 +139,12 @@ mainLoop whoseMove boardState iterationsLeft = do
     let choice = snd best
     let evaluation = fst (getNode (fst best))
     let nextBoard = snd (getNode (trtail!!choice))
-    if (evaluation < 5000.0) then (mainLoop (oppositeCell whoseMove) nextBoard (iterationsLeft - 1)) else (showWinner (oppositeCell whoseMove))
+    if (evaluation < 5000.0) then (mainLoop (oppositeCell whoseMove) nextBoard) else (showWinner (oppositeCell whoseMove))
 
 
 main :: IO ()
 main = do  
-    mainLoop X nineteen 361
+    mainLoop X nineteen
     putStrLn ("FINISHED!")
 
 
